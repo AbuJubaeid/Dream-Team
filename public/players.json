@@ -1,0 +1,98 @@
+[
+  {
+    "player_image": "https://i.ibb.co.com/8DdXY0p3/tamim.jpg",
+    "player_name": "Tamim Iqbal",
+    "player_country": "Bangladesh",
+    "playing_role": "Opening Batsman",
+    "rating": 8.7,
+    "price": 95000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/xttTrFHv/mustafiz.jpg",
+    "player_name": "Mustafizur Rahman",
+    "player_country": "Bangladesh",
+    "playing_role": "Pacer / Fast Bowler",
+    "rating": 8.2,
+    "price": 78000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/gZKn4jj5/shakib.jpg",
+    "player_name": "Shakib Al Hasan",
+    "player_country": "Bangladesh",
+    "playing_role": "All-Rounder",
+    "rating": 9.0,
+    "price": 120000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/v4kHsG11/perera.png",
+    "player_name": "Thisara Perera",
+    "player_country": "Sri Lanka",
+    "playing_role": "All-Rounder",
+    "rating": 7.8,
+    "price": 68000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/xqrnKzZK/moin.jpg",
+    "player_name": "Moeen Ali",
+    "player_country": "England",
+    "playing_role": "All-Rounder",
+    "rating": 7.5,
+    "price": 87000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/MktqYG3S/algelo.jpg",
+    "player_name": "Angelo Mathews",
+    "player_country": "Sri Lanka",
+    "playing_role": "All-Rounder",
+    "rating": 7.9,
+    "price": 71000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/Hp98jFKF/haidar.webp",
+    "player_name": "Haider Ali",
+    "player_country": "Pakistan",
+    "playing_role": "Batsman",
+    "rating": 7.1,
+    "price": 55000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/XrjVyzHS/nayeem.webp",
+    "player_name": "Nayeem Hasan",
+    "player_country": "Bangladesh",
+    "playing_role": "Spinner / Bowler",
+    "rating": 7.6,
+    "price": 46000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/ksT1npBc/mayers.webp",
+    "player_name": "Kyle Mayers",
+    "player_country": "West Indies",
+    "playing_role": "All-Rounder",
+    "rating": 8.1,
+    "price": 89000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/qYZs6N3q/charles.webp",
+    "player_name": "Johnson Charles",
+    "player_country": "West Indies",
+    "playing_role": "Batsman",
+    "rating": 7.2,
+    "price": 60000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/PGsz7Vvf/raja.webp",
+    "player_name": "Rejaur Rahman Raja",
+    "player_country": "Bangladesh",
+    "playing_role": "Batsman",
+    "rating": 6.9,
+    "price": 43000
+  },
+  {
+    "player_image": "https://i.ibb.co.com/5gZ9FG2Q/islam.webp",
+    "player_name": "Naeem Islam",
+    "player_country": "Bangladesh",
+    "playing_role": "All-Rounder",
+    "rating": 7.4,
+    "price": 57000
+  }
+]
