@@ -2,7 +2,8 @@ import { useState } from 'react';
 import flagLogo from '../../assets/flagLogo.png';
 import userImg from '../../assets/group.png';
 
-const PlayerCard = ({player, setAvailableBalance, availableBalance}) => {
+const PlayerCard = ({player, setAvailableBalance, availableBalance, purchasedPlayers, setPurchasedPlayers}) => {
+
     const [selected, isSelected] = useState(false)
     const handleSelected = (playerData) =>{
         if(availableBalance < playerData.price){
@@ -12,9 +13,12 @@ const PlayerCard = ({player, setAvailableBalance, availableBalance}) => {
         else{
             isSelected(true)
             setAvailableBalance(availableBalance - playerData.price)
+            setPurchasedPlayers([...purchasedPlayers, playerData])
            }
         
     }
+
+
     return (
         <div className="card bg-white text-black shadow-sm p-4 mb-4">
               <figure>
