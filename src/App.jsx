@@ -9,14 +9,18 @@ const fetchData = async () => {
   return res.json()
 }
 
+// state change howar por re-render hossilo tai function call take app component er bahire disi jate ekbar promise call hoy
+const playersPromise = fetchData()
+
 function App() {
   const [toggle, setToggle] = useState(true)
+  const [availableBalance, setAvailableBalance] = useState(600000)
 
-  const playersPromise = fetchData()
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar availableBalance={availableBalance}></Navbar>
+
       <div className='text-black max-w-[1200px] mx-auto flex justify-between items-center'>
         <h3 className='font-bold text-2xl'>Available Players</h3>
         <div className='font-bold'>
@@ -27,7 +31,10 @@ function App() {
 
       {
         toggle === true ? <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
-        <AvailablePlayers playersPromise={playersPromise}></AvailablePlayers>
+        <AvailablePlayers 
+        availableBalance={availableBalance}
+        setAvailableBalance={setAvailableBalance}  
+        playersPromise={playersPromise}></AvailablePlayers>
         </Suspense> : <SelectedPlayers></SelectedPlayers>
       }
       
