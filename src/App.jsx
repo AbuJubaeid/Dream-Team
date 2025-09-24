@@ -1,7 +1,8 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
 import Navbar from './components/Navbar/Navbar'
+import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
 
 const fetchData = async () => {
   const res = await fetch('/players.json')
@@ -9,6 +10,7 @@ const fetchData = async () => {
 }
 
 function App() {
+  const [toggle, setToggle] = useState(true)
 
   const playersPromise = fetchData()
 
@@ -18,14 +20,18 @@ function App() {
       <div className='text-black max-w-[1200px] mx-auto flex justify-between items-center'>
         <h3 className='font-bold text-2xl'>Available Players</h3>
         <div className='font-bold'>
-          <button className='border-2 border-r-0 rounded-l-2xl py-3 px-2 bg-[#E7FE29]'>Available</button>
-          <button className='border-2 border-l-0 rounded-r-2xl py-3 px-2'>Selected <span>(0)</span></button>
+          <button onClick={() => setToggle(true)} className={`border-2 border-r-0 rounded-l-2xl py-3 px-2 cursor-pointer ${toggle===true ? "bg-[#E7FE29]" : ""}`}>Available</button>
+          <button onClick={() => setToggle(false)} className={`border-2 border-l-0 rounded-r-2xl py-3 px-2 cursor-pointer ${toggle === false ? "bg-[#E7FE29]" : ""}`}>Selected <span>(0)</span></button>
         </div>
       </div>
-      <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
+
+      {
+        toggle === true ? <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
         <AvailablePlayers playersPromise={playersPromise}></AvailablePlayers>
-      </Suspense>
-      {/* <SelectedPlayers></SelectedPlayers> */}
+        </Suspense> : <SelectedPlayers></SelectedPlayers>
+      }
+      
+      
     </>
   )
 }

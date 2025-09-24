@@ -1,7 +1,7 @@
 
 const SelectedPlayers = () => {
     return (
-        <div>
+        <div className="max-w-[1200px] mx-auto text-black">
             selected
         </div>
     );
