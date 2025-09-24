@@ -1,8 +1,10 @@
 import { Suspense, useState } from 'react'
+import { ToastContainer } from 'react-toastify'
 import './App.css'
 import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
 import Navbar from './components/Navbar/Navbar'
 import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
+
 
 const fetchData = async () => {
   const res = await fetch('/players.json')
@@ -46,7 +48,7 @@ function App() {
         playersPromise={playersPromise}></AvailablePlayers>
         </Suspense> : <SelectedPlayers removePlayer={removePlayer} purchasedPlayers={purchasedPlayers}></SelectedPlayers>
       }
-      
+      <ToastContainer></ToastContainer>
       
     </>
   )
